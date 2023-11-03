@@ -1,0 +1,21 @@
+CREATE TABLE `YugiohPaulKarten` (
+ `ID` int(11) NOT NULL,
+ `Name` varchar(255) NOT NULL,
+ `Eigenschaft` enum('Licht','Finsternis','Wind','Wasser','Feuer','Erde','Zauber','Falle') NOT NULL,
+ `Stufe` int(11) NOT NULL,
+ `Bild` varchar(255) NOT NULL,
+ `Monstertyp` varchar(255) NOT NULL,
+ `Geschichte` text NOT NULL,
+ `Effekt` text NOT NULL,
+ `SetNummer` varchar(255) NOT NULL,
+ `Angriff` int(11) NOT NULL,
+ `Verteidigung` int(11) NOT NULL,
+ `Kartennummer` varchar(255) NOT NULL,
+ `Auflage` varchar(255) NOT NULL,
+ `Herstellungsdatum` varchar(255) NOT NULL,
+ `Typ` set('Normal (Gelb)','Effekt (Braun)','Synchro (Weiß)','XYZ (Schwarz)','Spielmarke (Grau)','Fusion (Lila)','Ritual (Blau)','Link (Blau)') NOT NULL,
+ `Seltenheitsgrad` set('Common','Rare','Gold Rare','Silberschrift','Secret Rare','Ghost Rare','Parallel Rare','') NOT NULL COMMENT 'Auf cardmarket.com: Weitere einfügen!! In eigene Tabelle auslagern',
+ `Bild(Skin)` varchar(255) NOT NULL,
+ `Anzahl` int(11) NOT NULL,
+ PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
